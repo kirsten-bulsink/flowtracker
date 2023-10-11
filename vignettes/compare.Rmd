@@ -1,0 +1,50 @@
+---
+title: "Compare"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{compare}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Load the package
+
+```{r setup}
+library(flowtracker)
+```
+
+# Example
+
+with the flowtracker package you can compare dataframes and test if ... 
+
+first create two datasets with a slight difference:
+```{r}
+data_before <- mtcars
+data_after <- mtcars |> dplyr::filter(cyl != 6)
+```
+
+By default, the compare_dfs function expects the data to be equal on all properties.
+If a property is different, the evalution will tell you
+```{r}
+compare_dfs(data_before, data_after)
+```
+
+Let's create a different 'after' dataset, with less columns.
+```{r}
+data_after2 <- dplyr::select(mtcars, -hp)
+```
+
+And compare them with the right expectation, namely 'less' columns.
+```{r}
+compare_dfs(data_before,
+            data_after2,
+            expect_n_cols = "less",
+            expect_colnames = "not_equal")
+```
