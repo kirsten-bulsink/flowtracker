@@ -12,7 +12,7 @@ The goal of flowtracker is to compare dataframes on different properties
 You can install the development version of flowtracker like so:
 
 ``` r
-install.packages("flowtracker")
+devtools::install_github("kirsten-bulsink/flowtracker", build_vignettes = TRUE)
 ```
 
 ## Example

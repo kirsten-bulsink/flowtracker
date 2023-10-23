@@ -1,13 +1,13 @@
 # dummy data -------------------------------------------------------------------
 df_start <- mtcars
 # less rows (filter)
-df_less_rows <- mtcars |> dplyr::filter(cyl != 6)
+df_less_rows <- dplyr::filter(mtcars, cyl != 6)
 # more rows (bind)
 df_more_rows <- dplyr::bind_rows(mtcars, mtcars)
 # less cols (select)
 df_less_cols <- dplyr::select(mtcars, -hp)
 # more cols (enriched)
-df_more_cols <- mutate(mtcars, new_var = "blablabla")
+df_more_cols <- dplyr::mutate(mtcars, new_var = "blablabla")
 
 # checks for compare_dfs -------------------------------------------------------
 test_that("compare_dfs returns a tibble", {

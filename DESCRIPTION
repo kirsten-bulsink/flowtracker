@@ -19,6 +19,7 @@ Suggests:
 Config/testthat/edition: 3
 Imports: 
     dplyr,
+    magrittr,
     stringr (>= 1.5.0),
     tibble (>= 3.2.1)
 RoxygenNote: 7.2.3

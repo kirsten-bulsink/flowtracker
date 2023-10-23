@@ -27,7 +27,7 @@ with the flowtracker package you can compare dataframes and test if ...
 first create two datasets with a slight difference:
 ```{r}
 data_before <- mtcars
-data_after <- mtcars |> dplyr::filter(cyl != 6)
+data_after <- mtcars %>% dplyr::filter(cyl != 6)
 ```
 
 By default, the compare_dfs function expects the data to be equal on all properties.

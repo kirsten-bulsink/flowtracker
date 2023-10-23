@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' compare_dfs(mtcars,
-#'             mtcars |> dplyr::filter(cyl != 6))
+#'             mtcars %>% dplyr::filter(cyl != 6))
 #'
 #' compare_dfs(mtcars,
 #'             dplyr::select(mtcars, -hp),
