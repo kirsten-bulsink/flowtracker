@@ -4,11 +4,13 @@ Title: Compare dataframes on different properties
 Version: 0.1.0
 Author: Kirsten Bulsink
 Maintainer: Kirsten Bulsink <kirsten.bulsink@rivm.nl>
-Description: This package makes it possible to compare dataframes on different properties 
-    (nr of columns, nr of rows, colnames) and to evaluate if this meets your expectation. 
-    This enables insight into the data tranformation process. It creates a possibility 
-    to check that the transformation gives the expected result and no unexpected behavior 
-    is introduced.
+Description: This is my toy package which I created during the R packages course 
+    of the escience center. The package makes it possible to compare dataframes 
+    on different properties (nr of columns, nr of rows, colnames) and to evaluate 
+    if this meets your expectation. This enables insight into the data tranformation 
+    process. It creates a possibility to check that the transformation gives the 
+    expected result and no unexpected behavior is introduced. 
+    center.
 License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
